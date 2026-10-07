@@ -1,0 +1,4 @@
+Upstream: https://github.com/3641397194-wq/ida-zh-cn
+Commit: 1258dad0d3714c684957b8edfe793ba4ea9849a1
+Files: plugin/ida_zh_cn.py, plugin/zh_cn.json, LICENSE, NOTICE.md
+This copy is the runtime UI plugin only. IDA Pro itself is not included.

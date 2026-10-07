@@ -6,12 +6,13 @@
 
 | 席位 | 写入位置 | 参考 |
 | --- | --- | --- |
-| GPT-6 Astra / Codex | `~/.codex/prompts/cha-codex.md` + `config.toml` 的 `model_instructions_file` + `~/.codex/AGENTS.md` | [xsser/codex-jailbreak-guide](https://github.com/xsser/codex-jailbreak-guide)，[Calrton/jailbreak-prompts](https://github.com/Calrton/jailbreak-prompts) |
+| GPT-6 Astra全模型支持 / Codex | `~/.codex/prompts/cha-codex.md` + `config.toml` 的 `model_instructions_file` + `~/.codex/AGENTS.md` | [xsser/codex-jailbreak-guide](https://github.com/xsser/codex-jailbreak-guide)，[Calrton/jailbreak-prompts](https://github.com/Calrton/jailbreak-prompts) |
 | Claude Code全模型支持 | `~/.claude/CLAUDE.md` + `~/.claude/rules/cha-breakopen.md` | [Claude Code memory](https://code.claude.com/docs/en/memory) |
 | Grok 4.7 | `~/.grok/AGENTS.md` + `rules/cha-breakopen.md` + `skills/cha-breakopen/SKILL.md` | [xai-org/grok-build](https://github.com/xai-org/grok-build)，AGENTS.md 惯例 |
 | DeepSeek v4.1 Flash | `$DSH_HOME/AGENTS.md` 加载入口 + `$DSH_HOME/skills/cha-deepseek/SKILL.md` 完整原包；默认 `~/.dsh` | [DeepSeek 官方 Harness](https://github.com/deepseek-ai/deepseek-harness)：按官方全局指令与技能加载合同安装。原包正文保持原样，模型版本在 Harness 内选择 |
 | GLM 5.3全模型支持 | `~/.glm/GLM.md` + `~/.zcode/AGENTS.md` | GLM Coding / ZCode 走 AGENTS.md 记忆层 |
 | Gemini全模型支持 | `~/.gemini/GEMINI.md` + `settings.json` 的 `context.fileName` | 本仓既有 Gemini 席位 |
+| Cursor | `%USERPROFILE%\.cursor\rules\cha-cursor.mdc`（YAML 头含 `alwaysApply: true`）+ `%USERPROFILE%\.cursor\skills\cha-cursor\SKILL.md`。不写安装目录，不写 `%APPDATA%\Cursor`，不写 `skills-cursor`，不写普通 `.md` 规则 | Cursor 用户规则目录 `~/.cursor/rules/*.mdc` |
 
 目录总览见 [simimasai111/ai-jailbreak-prompts](https://github.com/simimasai111/ai-jailbreak-prompts)。
 
@@ -55,6 +56,7 @@ DeepSeek 席位现在面向 `deepseek-ai/deepseek-harness`（命令 `dsh`）。�
 | DeepSeek | 装框三拍 | 装框 | 亮页 | 结单 |
 | GLM | 钉单三拍 | 钉单 | 开机页 | 长程直做 |
 | Gemini | 执行核三拍 | 执行核上线 | 合同页 | 五刃出货 |
+| Cursor | 常驻三拍 | 认用户目录 | 写常驻规则 | 对一下入口 |
 
 正文模板在 `desktop/src/lib/packs/`。桌面席位的预览 / 运行 / 检查 / 恢复四键对六个模型同样生效。
 
@@ -75,8 +77,10 @@ DeepSeek 席位现在面向 `deepseek-ai/deepseek-harness`（命令 `dsh`）。�
 
 小类拆法对齐 GitHub 公开 skill 库的「一类一面」结构（Claude-Red、rev-skills 121 原子技能、pentest-skills 的 /hunt injection、DFIR 的 memory/log/pcap），正文全部原创三拍。
 
-```powershell
+```bash
 python coldbrew.py --activate 冷咖啡 --seat grok --action preview --json
-python coldbrew.py --activate 冷咖啡 --seat claude --action deploy --home $env:TEMP\cha-claude-home --json
-python tools\seat_selftest.py
+python coldbrew.py --activate 冷咖啡 --seat claude --action deploy --home "$TMPDIR/cha-claude-home" --json
+python tools/seat_selftest.py
 ```
+
+Windows PowerShell 可将临时目录写成 `$env:TEMP\\cha-claude-home`；macOS/Linux 使用 `$TMPDIR/cha-claude-home` 或任意绝对目录。桌面端还提供 `npm run pack:win`、`npm run pack:mac` 和 `npm run pack:linux` 三个打包入口。

@@ -59,10 +59,10 @@ const PROVIDER_PRESETS = Object.freeze({
     streaming: false,
     description: '冷咖啡满配 · 完整访问'
   }),
-  'gpt-5.6-sol': Object.freeze({
-    id: 'gpt-5.6-sol',
-    label: 'GPT-5.6 Sol',
-    model: 'gpt-5.6-sol',
+  'gpt-6.1-sol': Object.freeze({
+    id: 'gpt-6.1-sol',
+    label: 'GPT-6.1 Sol',
+    model: 'gpt-6.1-sol',
     preset: 'coldcoffee-full',
     access: 'full',
     accessLevel: 'full',
@@ -78,9 +78,15 @@ const PROVIDER_ALIASES = Object.freeze({
   'gpt6-astra': 'gpt-6-astra',
   'gpt-6-asrra': 'gpt-6-astra',
   'gpt6-asrra': 'gpt-6-astra',
-  'gpt5.6-sol': 'gpt-5.6-sol',
-  'gpt-5-6-sol': 'gpt-5.6-sol',
-  'gpt56-sol': 'gpt-5.6-sol'
+  'gpt5.6-sol': 'gpt-6.1-sol',
+  'gpt-5-6-sol': 'gpt-6.1-sol',
+  'gpt56-sol': 'gpt-6.1-sol',
+  'gpt-5.6-sol': 'gpt-6.1-sol',
+  'gpt6.1-sol': 'gpt-6.1-sol',
+  'gpt6.1sol': 'gpt-6.1-sol',
+  'gpt61-sol': 'gpt-6.1-sol',
+  'gpt61sol': 'gpt-6.1-sol',
+  'gpt-6-1-sol': 'gpt-6.1-sol'
 });
 
 const MOCK_CATALOG = Object.freeze({
@@ -91,7 +97,7 @@ const MOCK_CATALOG = Object.freeze({
       name: '冷咖啡在线工作流',
       visibility: 'member',
       version: 'preview.1',
-      providers: Object.freeze(['gpt-6-astra', 'gpt-5.6-sol']),
+      providers: Object.freeze(['gpt-6-astra', 'gpt-6.1-sol']),
       status: 'available',
       unitCost: 1
     })
@@ -103,7 +109,7 @@ const MOCK_ENTITLEMENT = Object.freeze({
   accountId: 'preview-account',
   active: true,
   accessFull: true,
-  providers: Object.freeze({ 'gpt-6-astra': true, 'gpt-5.6-sol': true }),
+  providers: Object.freeze({ 'gpt-6-astra': true, 'gpt-6.1-sol': true }),
   workflows: Object.freeze({ 'coldcoffee-default': true }),
   source: 'preview'
 });
@@ -512,7 +518,9 @@ class RelayAdapter {
     const errors = [], warnings = [];
     // Explicit model IDs are case-sensitive server values. Only legacy preset
     // selections receive alias normalization; never infer entitlement by substring.
-    const selectedModel = text(modelId) || normalizeProviderId(providerId || 'gpt-6-astra');
+    const requestedModel = text(modelId) || text(providerId) || 'gpt-6-astra';
+    const normalizedModel = normalizeProviderId(requestedModel);
+    const selectedModel = PROVIDER_PRESETS[normalizedModel]?.model || requestedModel;
     const known = Object.values(PROVIDER_PRESETS).find(item => item.model === selectedModel);
     const provider = known ? clone(known) : {
       id: selectedModel, model: selectedModel, label: selectedModel,

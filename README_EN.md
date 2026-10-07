@@ -28,29 +28,31 @@ ColdBrew Zero arranges objective, context, output, and review as four panels. Th
 
 ## Quick Start
 
-```powershell
+```bash
 python coldbrew.py --activate 冷咖啡 --profile MAX --prompt "Turn this request into executable steps"
 ```
 
-```powershell
+```bash
 python coldbrew.py --activate 冷咖啡 --seat gemini --action deploy --json
 python coldbrew.py --activate 冷咖啡 --seat claude --action deploy --json
 python coldbrew.py --activate 冷咖啡 --seat grok --action deploy --json
 ```
 
-```powershell
+```bash
 cd desktop
-npm install
+npm ci
 npm start
 ```
 
-Build the Windows portable package with `npm run pack:win`.
+Build packages with the platform-specific commands: `npm run pack:win` (Windows portable), `npm run pack:mac` (macOS DMG and ZIP), or `npm run pack:linux` (Linux AppImage and DEB). GitHub Actions builds all three packages on their native runners and publishes them as workflow artifacts.
 
-All six seats write an original CHA pack into that model's local instruction files. Backups land in each home's `cha-backups\`. Use `verify` and `restore` for the marked block. See [docs/SEAT-PACKS.md](docs/SEAT-PACKS.md).
+All eight seats write an original CHA pack into that model's local instruction files. Backups land in each home's `cha-backups/`. Use `verify` and `restore` for the marked block. See [docs/SEAT-PACKS.md](docs/SEAT-PACKS.md).
+
+IDA user plugins resolve to `%APPDATA%\\Hex-Rays\\IDA Pro\\plugins` on Windows, `~/Library/Application Support/Hex-Rays/IDA Pro/plugins` on macOS, and `~/.idapro/plugins` on Linux. Set `IDAUSR` to override the user directory. The IDA MCP package cache follows each platform's user data directory; set `DOUBAO_USER_SKILLS` or `WORKBUDDY_HOME` when a client uses a custom location.
 
 ## 02 / Six Seats
 
-`GPT-6 Astra / Codex`, `Claude Code全模型支持`, `Grok 4.7`, `DeepSeek v4.1 Flash`, `GLM 5.3全模型支持`, and `Gemini全模型支持` share the same night desk.
+`GPT-6 Astra全模型支持 / Codex`, `Claude Code全模型支持`, `Grok 4.7`, `DeepSeek v4.1 Flash`, `GLM 5.3全模型支持`, and `Gemini全模型支持` share the same night desk.
 
 <div align="center">
   <img src="docs/assets/readme-noir-seats.svg" width="100%" alt="Six model seats" />

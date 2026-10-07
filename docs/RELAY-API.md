@@ -8,11 +8,11 @@
 
 1. 在 [冷咖啡中转站](https://coldcoffeeai.com/) 按需付费开通服务，并取得 API Key。
 2. 在桌面端“冷咖啡中转”页填写 Base URL `https://coldcoffeeai.com/v1` 与 API Key，点击“测试接入状态”。Key 在软件内填写即可。
-3. 从服务端返回的模型列表选择真实模型 ID，优先选择可用的 GPT-6 Astra 或 GPT-5.6 Sol。
+3. 从服务端返回的模型列表选择真实模型 ID，优先选择可用的 GPT-6 Astra 或 GPT-6.1 Sol。
 4. 点击“复制 Codex 配置”，合并到自己的用户级配置文件。该按钮仅复制 TOML，不含 API Key。
-5. 使用独立复制按钮取得 API Key 环境变量命令，在 PowerShell 中执行后，从同一个终端启动 `codex`。图形客户端按其接入说明配置提供商与密钥。
+5. 使用独立复制按钮取得平台对应的 API Key 环境变量命令：Windows 在 PowerShell 执行，macOS/Linux 在当前 shell 执行 `export`，再从同一个终端启动 `codex`。图形客户端按其接入说明配置提供商与密钥。
 
-“复制 Key 设置命令”会把真实 Key 放入剪贴板。执行后同时设置当前终端与 Windows 用户级环境变量；用户级变量会保存在本机，PowerShell 也可能保留命令历史。请仅在自己的电脑执行，勿把命令或截图发到群聊、仓库或工单。图形客户端需要完全退出并重新启动以加载新环境。下方手写 `$env:` 示例仅设置当前终端与它新启动的子进程。
+“复制 Key 设置命令”会把真实 Key 放入剪贴板。Windows 命令同时设置当前 PowerShell 与用户级环境变量；macOS/Linux 命令使用当前 shell 的 `export`。用户级变量会保存在本机，PowerShell 或 shell 历史也可能保留命令记录。请勿把命令或截图发到群聊、仓库或工单。图形客户端需要完全退出并重新启动以加载新环境。
 
 ## Codex 用户级配置
 
@@ -32,10 +32,17 @@ wire_api = "responses"
 requires_openai_auth = false
 ```
 
-在 PowerShell 当前会话设置 Key 并启动 Codex：
+Windows PowerShell 当前会话设置 Key 并启动 Codex：
 
 ```powershell
 $env:COLDCOFFEE_API_KEY = "YOUR_API_KEY"
+codex
+```
+
+macOS/Linux 当前 shell 设置 Key 并启动 Codex：
+
+```bash
+export COLDCOFFEE_API_KEY='YOUR_API_KEY'
 codex
 ```
 

@@ -1,0 +1,64 @@
+.newbie{--mx:72%;--my:28%;position:relative;isolation:isolate;overflow:hidden;min-height:680px;margin:0 0 8px;padding:26px 26px 18px;border:1px solid #6a3d48;border-left:4px solid #e53543;background:
+ radial-gradient(520px 320px at var(--mx) var(--my), rgba(229,53,67,.34), transparent 62%),
+ linear-gradient(105deg, rgba(6,5,6,.94) 0%, rgba(6,5,6,.78) 42%, rgba(6,5,6,.28) 100%),
+ url("../../assets/coldcoffee-manga-v5.jpg") 78% 30% / cover no-repeat;
+box-shadow:8px 10px 0 #000a}
+.newbie:before{content:"";position:absolute;inset:auto -80px -120px auto;width:420px;height:420px;border:1px solid rgba(229,53,67,.45);border-radius:50%;z-index:0;animation:newbie-spin 28s linear infinite;pointer-events:none}
+.newbie:after{content:"";position:absolute;inset:auto -20px -60px auto;width:280px;height:280px;border:1px dashed rgba(241,237,231,.35);border-radius:50%;z-index:0;animation:newbie-spin 18s linear infinite reverse;pointer-events:none}
+.newbie-grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(280px,380px) minmax(0,1fr);gap:26px;align-items:start}
+.newbie .eyebrow{color:#f0a8ae;letter-spacing:3px}
+.newbie h1{margin:10px 0 8px;font-size:clamp(52px,6vw,84px);line-height:.88;letter-spacing:-3px;color:#f6f1ea;text-shadow:0 10px 30px #000}
+.newbie h1 em{display:block;font-style:normal;color:#ff5563;text-shadow:0 0 18px rgba(229,53,67,.75)}
+.newbie-lead{max-width:360px;color:#e6d9d4;font-size:14px;text-shadow:0 1px 6px #000}
+.newbie-steps{display:grid;gap:8px;margin:18px 0 0;padding:0;list-style:none}
+.newbie-steps button{display:flex;gap:12px;align-items:center;width:100%;text-align:left;padding:10px 12px;background:rgba(12,8,10,.72);border-color:#5c3a42;color:#d9ccc8}
+.newbie-steps button b{font:12px Consolas,monospace;color:#ff7080}
+.newbie-steps button.on{border-color:#e53543;color:#fff;box-shadow:inset 3px 0 #e53543}
+.newbie-go{position:relative;overflow:hidden;width:100%;margin-top:16px;padding:16px 18px;font-size:20px;letter-spacing:6px;color:#fffaf6;background:linear-gradient(100deg,#8e1020,#e53543 42%,#ffb1a8);border:0;box-shadow:0 0 28px rgba(229,53,67,.55), 4px 4px 0 #4a0c14}
+.newbie-go:hover{color:#fff;background:linear-gradient(100deg,#b4162a,#ff4454 46%,#ffd0cb)}
+.newbie-go:disabled{opacity:.55}
+.newbie-go:after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.38) 50%,transparent 70%);transform:translateX(-130%);animation:newbie-sheen 2.6s ease-in-out infinite;pointer-events:none}
+.newbie-undo{width:100%;margin-top:8px;padding:11px 14px;font-size:14px;letter-spacing:4px;color:#f0d2cc;background:transparent;border:1px solid #a14a56}
+.newbie-undo:hover{color:#fff;border-color:#ff7080;background:#2a1218}
+.newbie-undo:disabled{opacity:.45}
+.newbie-side-actions{display:flex;gap:8px;margin-top:10px}
+.newbie-side-actions button{flex:1;font-size:11px;background:rgba(16,10,12,.8)}
+.newbie-status{min-height:1.4em;margin:12px 0 0;color:#f0d2cc;font-size:12px}
+.newbie-shop{margin-top:14px;padding:14px 14px 12px;background:rgba(20,8,12,.88);border:1px solid #e53543}
+.newbie-shop strong{display:block;margin:2px 0 6px;font-size:20px;letter-spacing:0}
+.newbie-shop p{margin:0;color:#e4cfc9;font-size:13px;line-height:1.5}
+.newbie-shop-kicker{display:block;margin-top:14px;color:#f0a8ae;font:10px Consolas,monospace;letter-spacing:3px}
+.newbie-shop-actions,.newbie-groups{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+.newbie-shop-actions button,.newbie-groups button{min-width:0;font-size:12px;padding:8px 6px;background:#2a1218}
+.newbie-groups button{font-family:Consolas,monospace;font-size:11px}
+.newbie-finale{margin-top:14px;padding:14px;background:rgba(10,6,8,.82);border:1px solid #e53543;box-shadow:0 0 24px rgba(229,53,67,.25)}
+.newbie-finale span{font:10px Consolas,monospace;letter-spacing:2px;color:#f0a8ae}
+.newbie-finale strong{display:block;margin:4px 0 8px;font-size:32px;letter-spacing:6px}
+.newbie-finale p{margin:8px 0 0;font-size:12px}
+.newbie-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;perspective:900px}
+.newbie-card{position:relative;min-height:168px;padding:14px 12px 12px;text-align:left;color:#f4ece7;background:linear-gradient(165deg,rgba(22,12,16,.9),rgba(8,6,8,.8));border:1px solid #6d4650;box-shadow:0 12px 28px rgba(0,0,0,.45);transform-style:preserve-3d;transition:border-color .15s,box-shadow .15s;cursor:pointer}
+.newbie-card:hover{border-color:#d46a76}
+.newbie-card[aria-pressed="true"]{border-color:#ff8b96;box-shadow:inset 0 0 0 1px #e53543,0 0 22px rgba(229,53,67,.35)}
+.newbie-card.is-run{border-color:#fff}
+.newbie-card.is-ok{border-color:#b7c7b4}
+.newbie-card.is-bad{border-color:#ff7080}
+.newbie-card .tick{position:absolute;top:10px;right:10px;width:18px;height:18px;border:1px solid #8d6570;border-radius:50%}
+.newbie-card[aria-pressed="true"] .tick{background:#e53543;border-color:#ffd0d4;box-shadow:0 0 10px #e53543}
+.newbie-card .mark{font:10px Consolas,monospace;letter-spacing:2px;color:#ff7080}
+.newbie-card strong{display:block;margin-top:10px;font-size:20px}
+.newbie-card .line{color:#cbb8bc;font-size:11px}
+.newbie-card .state{display:block;min-height:2.6em;margin-top:8px;color:#f0e4de;font-size:12px}
+.newbie-card code{display:block;margin-top:6px;color:#b9a4a8;font-size:10px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.newbie-open{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.newbie-open button{font-size:10px;padding:4px 8px;background:#2a1218;border-color:#a14a56}
+.newbie-card.is-run:before{content:"";position:absolute;left:0;top:0;height:2px;width:40%;background:#fff;box-shadow:0 0 12px #fff;animation:newbie-load .9s linear infinite}
+.advanced-fold{margin:6px 0 18px}
+.advanced-fold>summary{cursor:pointer;list-style:none;padding:12px 2px 16px;color:#d7c4c8;letter-spacing:2px;font-size:12px}
+.advanced-fold>summary::-webkit-details-marker{display:none}
+.advanced-fold>summary:before{content:"＋ ";color:#e53543}
+.advanced-fold[open]>summary:before{content:"－ "}
+@keyframes newbie-spin{to{transform:rotate(360deg)}}
+@keyframes newbie-sheen{0%{transform:translateX(-130%)}55%,100%{transform:translateX(130%)}}
+@keyframes newbie-load{from{left:-40%}to{left:100%}}
+@media(max-width:1100px){.newbie-grid{grid-template-columns:1fr}.newbie-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.newbie{min-height:0}}
+@media(max-width:700px){.newbie{padding:16px}.newbie h1{font-size:48px}.newbie-cards{grid-template-columns:1fr}.newbie-go{letter-spacing:3px;font-size:16px}}

@@ -22,7 +22,7 @@ const { RelayAdapter } = require('../../desktop/src/lib/relay-adapter');
       res.statusCode = 401;
       res.end(JSON.stringify({ message: `Invalid API key: ${req.headers.authorization}` }));
     } else if (req.url === '/v1/models') {
-      res.end(JSON.stringify({ object: 'list', data: [{ id: 'gpt-5.6-sol' }, { id: 'Exact-Versioned-Model-2026' }] }));
+      res.end(JSON.stringify({ object: 'list', data: [{ id: 'gpt-6.1-sol' }, { id: 'Exact-Versioned-Model-2026' }] }));
     } else if (req.url === '/v1/usage') {
       res.end(JSON.stringify({ quota: { remaining, unit: 'USD' }, is_active: true }));
     } else if (req.url === '/v1/responses' && req.method === 'POST') {

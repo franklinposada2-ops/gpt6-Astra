@@ -1,113 +1,105 @@
 <div align="center">
-  <img src="docs/assets/coldcoffee-cover-v4.png" width="100%" alt="冷咖啡原创黑白漫画主视觉" />
+  <img src="docs/assets/coldcoffee-cover-v5-c18118b1aed9.jpg" width="100%" alt="冷咖啡黑白漫画主视觉，夜班吧台和一杯冰美式" />
   <h1>冷咖啡 · 破甲工作台</h1>
-  <p><strong>六模型席位 · 本地任务构建 · 付费中转入口 · 会话版本对比</strong></p>
-  <p>保留冷咖啡的直接与锋利，让任务更明确，让输出有据可查。</p>
-  <p><a href="#软件界面">软件界面</a> · <a href="#冷咖啡中转">冷咖啡中转</a> · <a href="#闭源工作流">闭源工作流</a> · <a href="#上手使用">上手使用</a> · <a href="#冷咖啡社群">三个 QQ 群</a></p>
-  <p><sub>3.1.0-preview.1 · 本地预览版 · 尚未验证真实模型突破效果</sub></p>
+  <p><a href="https://github.com/3641397194-wq/gpt6-Astra/blob/main/%E5%86%B7%E5%92%96%E5%95%A1.mp4"><strong>冷咖啡.mp4 · 点这里看视频</strong></a></p>
+  <p><strong>十一个软件 · 一键破甲 · 一键卸载</strong></p>
+  <p>打勾，按一下。打开软件后发「冷咖啡」。不想要了，按卸载，文件回到写入之前。</p>
+  <p><a href="#下载">下载</a> · <a href="#上手使用">上手使用</a> · <a href="#十一个软件">十一个软件</a> · <a href="#四页">四页</a> · <a href="#冷咖啡中转">冷咖啡中转</a> · <a href="#工具箱">工具箱</a> · <a href="#冷咖啡社群">三个 QQ 群</a></p>
+  <p><sub>3.1.0-preview.3 · 三个系统 · 十一个软件 · <a href="https://coldcoffeeai.com/">coldcoffeeai.com</a></sub></p>
 </div>
 
 <blockquote>
-<p><strong>本地词包启动口令：<code>冷咖啡</code></strong></p>
-<p>使用本地词包时，完成安装与接入后，在目标软件的对话框里<strong>单独发送「冷咖啡」</strong>。冷咖啡中转的内置工作流按服务端配置自动应用，顾客直接接入 API 即可，无需安装本软件或本地 Skill 文件。</p>
-<p>接入严格控制层时，未输入口令保持待机；安装完成不等于已激活。原版兼容部署与严格开关的接入说明见 <a href="docs/ACTIVATION.md">启动说明</a>。</p>
+<p><strong>口令：<code>冷咖啡</code></strong></p>
+<p>勾上要写的软件，按一键破甲。打开那个软件，单独发送「冷咖啡」。Key 在 <a href="https://coldcoffeeai.com/">coldcoffeeai.com</a> 买，回到软件里贴上。</p>
 </blockquote>
 
-<h2 id="软件界面">软件功能界面</h2>
-<p>下面六张都是 3.1 工作台实机画面：左侧六个功能页，右侧对应操作区。不是概念图，也不是海报。</p>
-<p><strong>01 任务模板</strong> · 写目标、选档位、本地构建任务契约；需要走付费中转时再点发送。</p>
-<img src="docs/assets/workbench-v3-3f8ea5204a3b.png" width="100%" alt="冷咖啡工作台：任务模板，本地构建与交付预览" />
-<table>
-<tr>
-<th align="center">02 席位包部署</th>
-<th align="center">03 冷咖啡中转</th>
-</tr>
-<tr>
-<td align="center"><img src="docs/assets/ui-packs-d8b601d4cd45.png" width="100%" alt="席位包部署：冷咖啡口令验证与文件预览" /></td>
-<td align="center"><img src="docs/assets/ui-relay-9705a35c7f2f.png" width="100%" alt="冷咖啡中转：Codex API 接入配置" /></td>
-</tr>
-<tr>
-<th align="center">04 输出测评</th>
-<th align="center">05 会话版本对比</th>
-</tr>
-<tr>
-<td align="center"><img src="docs/assets/ui-eval-269a60109ce6.png" width="100%" alt="输出测评：JSON 与必含词本地检查" /></td>
-<td align="center"><img src="docs/assets/ui-history-a81b95080ae5.png" width="100%" alt="会话版本对比：两次构建的文本差异" /></td>
-</tr>
-</table>
-<p><strong>06 冷咖啡社群</strong> · 三个 QQ 群入口做在软件里，扫码或复制群号。</p>
-<img src="docs/assets/ui-community-c225da0cb0d9.png" width="100%" alt="冷咖啡工作台社群页：三个 QQ 群二维码" />
-<table>
-<tr><th align="left">构建更清楚</th><th align="left">版本看得见</th><th align="left">输出可检查</th></tr>
-<tr><td>原词包保持不变。桌面端自动识别配置目录并展示差异，确认写入前自动备份；也支持手动选择。</td><td>部署历史保存在所选目录，可按版本恢复。文件在部署后被改动时中止恢复，保留现场。</td><td>逐文件核对 SHA-256。另提供 JSON、代码围栏与必含词检查，不预填成功率。</td></tr>
-</table>
-<p><strong>边界说明：</strong>席位选择是任务模板配置，不代表模型已连接；本地构建不会向模型发请求。任务模板的会话记录保存在内存，刷新后清空；部署备份单独保存在所选目录。文本条件通过不等于模型突破或代码正确。</p>
-
-<h2 id="冷咖啡中转">冷咖啡中转（付费服务）</h2>
 <blockquote>
-<p><strong>冷咖啡中转由冷咖啡运营，按套餐或实际用量计费。</strong> 把 API 地址和 API Key 接入自己的 Codex，即可使用冷咖啡提供的模型服务。根据服务说明，中转内置工作流随请求自动应用，无需安装本软件或本地 Skill 文件；具体内容与版本以服务端配置为准。</p>
-<p><strong>桌面端已接入真实 OpenAI 兼容请求：</strong>默认 Base URL 为 <code>https://coldcoffeeai.com/v1</code>。测试连接读取 <code>/models</code>，用量状态读取 <code>/usage</code>；点击任务发送按钮后，才会向 <code>/responses</code> 提交任务。真实账号的成功响应仍待顾客在软件中填写有效 API Key 后验证。</p>
+<p><strong>需要闭源破甲，或者定制破甲，进 QQ 群找管理。</strong></p>
+<p>开源破甲在软件里自己勾上安装。闭源破甲和定制破甲不在这个仓库开通。一群 <code>1057540028</code>、二群 <code>1077074552</code>、三群 <code>618179023</code>。</p>
 </blockquote>
-<p><a href="https://coldcoffeeai.com/">访问冷咖啡中转站 ↗</a></p>
-<p><a href="docs/RELAY-API.md">查看完整 API / Codex 接入说明 ↗</a></p>
-<table>
-<tr><th align="left">服务内容</th><th align="left">顾客看到的状态</th><th align="left">说明</th></tr>
-<tr><td><strong>内置工作流</strong></td><td>服务端自动应用</td><td>这是中转服务说明。当前未配置公开工作流目录接口；模型列表返回成功不代表已验证工作流激活。</td></tr>
-<tr><td><strong>GPT-6 Astra / GPT-5.6 Sol</strong></td><td>推荐模型，按实际列表选择</td><td>模型 ID 使用 <code>/models</code> 返回的真实值，可用范围以 API Key 权限为准。</td></tr>
-<tr><td><strong>完全访问</strong></td><td>在顾客自己的 Codex 中设置</td><td>这是本地工具权限，与中转套餐、余额和模型权限分开。</td></tr>
-</table>
-<p><strong>推荐配置：</strong>优先选择服务端实际提供的 GPT-6 Astra 或 GPT-5.6 Sol，在自己的 Codex 中按任务需要设置完全访问，并选择该模型支持的高推理档位。<code>xhigh</code> 仅在模型支持时启用；模型与客户端能力以实际返回为准。</p>
-<ol>
-<li><strong>测试连接：</strong>在桌面端“冷咖啡中转”页填写 API 地址与 API Key，点击“测试接入状态”读取真实模型列表。</li>
-<li><strong>复制配置：</strong>选择返回列表中的模型，复制纯 TOML 配置并合并到 <code>%USERPROFILE%\.codex\config.toml</code>；配置文本不含 API Key。</li>
-<li><strong>启动自己的 Codex：</strong>通过独立按钮复制 API Key 环境变量命令，在 PowerShell 中执行后，从同一终端运行 <code>codex</code>。图形客户端按其接入说明配置密钥与提供商。</li>
-<li><strong>发送任务：</strong>日常直接在 Codex 使用。也可在软件任务页主动点击“发送到冷咖啡中转”，真实 POST <code>/responses</code> 并等待完整结果；这一路径当前采用整体返回。</li>
-</ol>
-<p><strong>费用说明：</strong>中转套餐/用量费用与闭源工作流授权费用分开计算。顾客也可以使用自己的订阅账号或其他兼容中转；本仓库不存放任何账号、密钥或余额信息。</p>
 
-<h2 id="闭源工作流">闭源工作流 · QQ 群私聊管理员</h2>
-<p><strong>闭源工作流不公开放在仓库，也不提供公开自助下载。</strong> 需要使用、定制或购买授权时，请先加入下面的 QQ 群，再私聊管理员沟通功能、价格、授权周期和设备数量。确认方案并完成付费后，由管理员按客户需求交付本地安装包或定制版本。</p>
+<h2 id="下载">下载</h2>
+<p>三个系统都是 3.1.0-preview.3，和下面这张席位表是同一套：十一个软件，含 Kimi K3。金色条是闭源和定制。macOS 这一包是 Apple 芯片 arm64。</p>
 <table>
-<tr><th align="left">交付内容</th><th align="left">使用方式</th><th align="left">费用关系</th></tr>
-<tr><td>闭源工作流安装包、更新和定制组件</td><td>安装到顾客电脑后本地使用</td><td>由管理员私聊报价并单独授权</td></tr>
-<tr><td>模型来源</td><td>可绑定个人订阅、冷咖啡中转或其他兼容中转</td><td>模型订阅/中转调用费用另计</td></tr>
+<tr><th align="left">系统</th><th align="left">版本</th><th align="left">席位</th><th align="left">安装包</th></tr>
+<tr><td><strong>Windows</strong></td><td><code>3.1.0-preview.3</code></td><td>十一个，含 Kimi K3</td><td><a href="https://github.com/3641397194-wq/gpt6-Astra/releases/download/v3.1.0-preview.3/ColdCoffee-Workbench-Windows-3.1.0-preview.3.exe">免安装 .exe ↗</a></td></tr>
+<tr><td><strong>macOS</strong></td><td><code>3.1.0-preview.3</code></td><td>十一个，含 Kimi K3，Apple 芯片 arm64</td><td><a href="https://github.com/3641397194-wq/gpt6-Astra/releases/download/v3.1.0-preview.3/ColdCoffee-Workbench-macOS-arm64-3.1.0-preview.3.dmg">.dmg ↗</a> · <a href="https://github.com/3641397194-wq/gpt6-Astra/releases/download/v3.1.0-preview.3/ColdCoffee-Workbench-macOS-arm64-3.1.0-preview.3.zip">.zip ↗</a></td></tr>
+<tr><td><strong>Linux</strong></td><td><code>3.1.0-preview.3</code></td><td>十一个，含 Kimi K3，x86_64</td><td><a href="https://github.com/3641397194-wq/gpt6-Astra/releases/download/v3.1.0-preview.3/coldbrew-zero-3.1.0-preview.3-linux-x86_64.AppImage">.AppImage ↗</a> · <a href="https://github.com/3641397194-wq/gpt6-Astra/releases/download/v3.1.0-preview.3/coldbrew-zero-3.1.0-preview.3-linux-amd64.deb">.deb ↗</a></td></tr>
 </table>
-<p><a href="#冷咖啡社群">进入三个 QQ 群并私聊管理员 ↓</a></p>
-
-<h2 id="上手使用">上手使用</h2>
-<ol>
-<li><strong>选模型与目录：</strong>选择模型席位和明确的目标目录，预览将写入的原版词包与文件差异。</li>
-<li><strong>确认安装：</strong>确认备份并写入，检查配置文件。严格开关需目标客户端接入消息处理层；浏览器专用目录用于演示，不是客户端真实配置目录。</li>
-<li><strong>输入口令：</strong>重新加载对应客户端后，在对话框单独发送 <code>冷咖啡</code>，显示原欢迎页后再开始任务。</li>
-</ol>
-<p>从项目根目录启动桌面端（需要 Node.js 和 npm）：</p>
+<p>Windows 双击打开。macOS 第一次若被拦住，在程序图标上右键，选打开。Linux 的 AppImage 先加上可执行权限。deb 用系统的安装器。</p>
 <pre><code>cd desktop
 npm ci
 npm start</code></pre>
-<p>运行新功能测试：</p>
-<pre><code>cd desktop
-npm test</code></pre>
-<p>从项目根目录启动浏览器预览（需要 Node.js；此启动入口还需 Python 3.9+）：</p>
-<pre><code>python tools/preview/server.py</code></pre>
-<p>浏览器访问本机端口 8772 的 <code>/readme-preview</code> 查看本页，访问 <code>/workbench/</code> 操作新版工作台。浏览器与桌面端复用同一套界面和任务构建代码。</p>
-<details><summary>已有用户：原版席位工具与本次升级范围</summary>
-<p>原版席位包与根目录命令行入口保留，新界面已接入独立事务式部署、检查和版本恢复，桌面端启动和切换席位时自动定位环境变量或约定配置目录，只预览不静默写入。DeepSeek v4.1 Flash 对接官方 Harness 的 DSH_HOME / ~/.dsh 目录，GLM 支持 ZCode 实际目录。确认后安装清单文件；网页预览仅操作演示目录。</p>
-<p>原有命令行参数见 <code>python coldbrew.py --help</code>；原有席位文档见 <a href="docs/SEAT-PACKS.md">席位包说明</a>。严格启动适配器与原版兼容部署分开：第三方客户端必须接入消息处理层，原版提示词文件自身不是强制开关。详见 docs/ACTIVATION.md。</p>
-</details>
+<p>想自己打对应系统的包：</p>
+<pre><code>npm run pack:win    # Windows portable
+npm run pack:mac    # macOS DMG + ZIP
+npm run pack:linux  # Linux AppImage + DEB</code></pre>
 
-<h2 id="模型席位">模型席位</h2>
+<h2 id="上手使用">上手使用</h2>
+<ol>
+<li><strong>打开软件：</strong>Windows、macOS、Linux 都用 3.1.0-preview.3。macOS 这一包是 Apple 芯片。</li>
+<li><strong>一键破甲：</strong>只勾你要写的软件，按一下。写入之前会先备份。只改勾上的软件。</li>
+<li><strong>发送口令：</strong>打开那个软件，对话框里单独发「冷咖啡」。不想要了，回到这里按一键卸载，文件回到写入之前。</li>
+</ol>
+
+<h2 id="十一个软件">十一个软件</h2>
+<p>一键破甲可以一次勾多个。只写勾上的。下表是各软件认的目录，和实际写入的主文件。</p>
 <table>
-<tr><th>GPT-6 Astra</th><th>Claude Code全模型支持</th><th>Grok 4.7</th></tr>
-<tr><td>目标 · 实现 · 验收</td><td>约束 · 结构 · 复核</td><td>问题 · 产物 · 待验证项</td></tr>
-<tr><th>DeepSeek v4.1 Flash</th><th>GLM 5.3全模型支持</th><th>Gemini全模型支持</th></tr>
-<tr><td>拆分 · 复现 · 检查</td><td>条目 · 推进 · 交付</td><td>素材 · 组织 · 验证</td></tr>
+<tr><th align="left">#</th><th align="left">软件</th><th align="left">Windows</th><th align="left">macOS / Linux</th><th align="left">主文件</th></tr>
+<tr><td>01</td><td>GPT-6 Astra全模型支持</td><td><code>%USERPROFILE%\.codex</code></td><td><code>~/.codex</code></td><td><code>prompts/cha-codex.md</code>，另写 <code>AGENTS.md</code> 和 <code>config.toml</code></td></tr>
+<tr><td>02</td><td>Claude Code全模型支持</td><td><code>%USERPROFILE%\.claude</code></td><td><code>~/.claude</code></td><td><code>CLAUDE.md</code></td></tr>
+<tr><td>03</td><td>Grok 4.7</td><td><code>%USERPROFILE%\.grok</code></td><td><code>~/.grok</code></td><td><code>AGENTS.md</code></td></tr>
+<tr><td>04</td><td>DeepSeek v4.1 Flash</td><td><code>%USERPROFILE%\.dsh</code></td><td><code>~/.dsh</code></td><td><code>skills/cha-deepseek/SKILL.md</code></td></tr>
+<tr><td>05</td><td>GLM 5.3全模型支持</td><td><code>%USERPROFILE%\.glm</code>，有 ZCode 时用 <code>%USERPROFILE%\.zcode</code></td><td><code>~/.glm</code>，有 ZCode 时用 <code>~/.zcode</code></td><td><code>GLM.md</code></td></tr>
+<tr><td>06</td><td>Gemini全模型支持</td><td><code>%USERPROFILE%\.gemini</code></td><td><code>~/.gemini</code></td><td><code>GEMINI.md</code></td></tr>
+<tr><td>07</td><td>豆包</td><td><code>%LOCALAPPDATA%\Doubao\User Data\Default\.doubao\agent_mode\workspace\.user_skills</code></td><td>macOS <code>~/Library/Application Support/Doubao/...</code>，Linux <code>~/.local/share/Doubao/...</code>。不写软件自带的 <code>.skills</code></td><td><code>cha-doubao/SKILL.md</code></td></tr>
+<tr><td>08</td><td>WorkBuddy</td><td><code>%USERPROFILE%\.workbuddy</code></td><td><code>~/.workbuddy</code></td><td><code>skills/cha-workbuddy/SKILL.md</code></td></tr>
+<tr><td>09</td><td>Cursor</td><td><code>%USERPROFILE%\.cursor</code></td><td><code>~/.cursor</code></td><td>只写 <code>rules/cha-cursor.mdc</code> 和 <code>skills/cha-cursor/SKILL.md</code></td></tr>
+<tr><td>10</td><td>MiMo-V2.6-Pro</td><td><code>%USERPROFILE%\.config\mimocode</code></td><td><code>~/.config/mimocode</code></td><td>只写 <code>skills/cha-mimo/SKILL.md</code></td></tr>
+<tr><td>11</td><td>Kimi K3</td><td><code>%USERPROFILE%\.kimi-code</code></td><td><code>~/.kimi-code</code></td><td>只写 <code>skills/cha-kimi/SKILL.md</code></td></tr>
 </table>
-<p>以上是仓库中的席位名称与组织方式，不是提供商的模型可用性保证。</p>
+<p>01 到 06 还会在同一目录写工单技能 <code>skills/</code>。09、10、11 不写这一层以外的配置。</p>
+<table>
+<tr><th align="left">软件</th><th align="left">不写</th></tr>
+<tr><td>Cursor</td><td>安装目录、<code>%APPDATA%\Cursor</code>、<code>skills-cursor</code>。环境变量 <code>CURSOR_HOME</code> 只有目录名仍是 <code>.cursor</code> 才用。规则头里有 <code>alwaysApply: true</code>。</td></tr>
+<tr><td>MiMo-V2.6-Pro</td><td>npm 安装目录、<code>auth.json</code>、<code>mimocode.json</code>。没设变量时在 <code>.config/mimocode</code>。设了绝对路径 <code>MIMOCODE_HOME</code> 才改写 <code>$MIMOCODE_HOME/config</code>。</td></tr>
+<tr><td>Kimi K3</td><td>程序目录、<code>config.toml</code>、凭据、会话、<code>mcp.json</code>、旧目录 <code>~/.kimi</code>、跨工具的 <code>~/.agents/skills</code>。设了绝对路径 <code>KIMI_CODE_HOME</code> 时，数据根就是这个目录，技能仍在它下面的 <code>skills/cha-kimi/SKILL.md</code>。</td></tr>
+</table>
+
+<h2 id="四页">四页</h2>
+<table>
+<tr><th align="left">页</th><th align="left">做什么</th></tr>
+<tr><td><strong>01 一键破甲</strong></td><td>十一个软件打勾，按一下。写入前先备份。卸载把勾上的文件退回备份。</td></tr>
+<tr><td><strong>02 冷咖啡中转</strong></td><td>地址 <code>https://coldcoffeeai.com/v1</code>。Key 自己贴，只留在这台电脑。</td></tr>
+<tr><td><strong>03 冷咖啡社群</strong></td><td>需要闭源破甲，或者定制破甲，进群找管理。用法和售后也在这里。</td></tr>
+<tr><td><strong>04 工具箱</strong></td><td>IDA 简体中文，以及本机 <code>127.0.0.1:13337</code>。不装扫描器，不装利用工具。</td></tr>
+</table>
+
+<h2 id="冷咖啡中转">冷咖啡中转</h2>
+<p>地址不用改。Key 在官网买，贴进软件里。Key 只留在这台电脑上，不进这个仓库。</p>
+<p>接口基址 <code>https://coldcoffeeai.com/v1</code>。</p>
+<p><a href="https://coldcoffeeai.com/">去官网买 Key ↗</a></p>
+<ol>
+<li>打开「冷咖啡中转」，地址已经是 <code>https://coldcoffeeai.com/v1</code>。</li>
+<li>把买来的 Key 贴进下面的框。</li>
+<li>复制 Codex 配置。配置文本里没有 Key。Windows 合并到 <code>%USERPROFILE%\.codex\config.toml</code>，macOS / Linux 合并到 <code>~/.codex/config.toml</code>。</li>
+</ol>
+
+<h2 id="工具箱">工具箱</h2>
+<p>IDA Pro 9.x 简体中文界面来自 <a href="https://github.com/3641397194-wq/ida-zh-cn">ida-zh-cn</a>。复制 <code>ida_zh_cn.py</code> 和 <code>zh_cn.json</code> 到你的 IDA 用户插件目录。</p>
+<table>
+<tr><th align="left">系统</th><th align="left">默认插件目录</th></tr>
+<tr><td>Windows</td><td><code>%APPDATA%\Hex-Rays\IDA Pro\plugins</code></td></tr>
+<tr><td>macOS</td><td><code>~/Library/Application Support/Hex-Rays/IDA Pro/plugins</code></td></tr>
+<tr><td>Linux</td><td><code>~/.idapro/plugins</code></td></tr>
+</table>
+<p>设置了 <code>IDAUSR</code> 时用它的第一段。IDA 安装目录不动。卸掉插件文件时留下你自己的 <code>zh_cn_user.json</code>。装好后重启 IDA，或按 Alt+F7 选中 <code>ida_zh_cn.py</code>。开关在 Edit → Plugins → 中文界面 开/关。</p>
+<p>一键破甲时，能写配置的软件会带上本机 IDA 连接 <code>http://127.0.0.1:13337/mcp</code>。IDA 没开着，就按软件里的说明自己挂。这里不装扫描器，也不装利用工具。</p>
 
 <h2 id="冷咖啡社群">冷咖啡社群</h2>
-<p>交流用法，讨论模型，分享作品。三个 QQ 群统一展示，点击二维码查看原图；需要闭源工作流、付费授权或定制方案时，加入任一群后<strong>私聊管理员</strong>，由管理员分流沟通。</p>
+<p>需要闭源破甲，或者定制破甲，进下面三个群找管理。Key 去 <a href="https://coldcoffeeai.com/">coldcoffeeai.com</a> 买。用法和售后也在群里问。</p>
 <table>
-<tr><th>QQ 交流群</th><th>QQ 专题群</th><th>Cool coffeeAI 交流</th></tr>
+<tr><th>一群</th><th>二群</th><th>三群</th></tr>
 <tr><td align="center"><a href="docs/assets/qq-group-1-card.png"><img src="docs/assets/qq-group-1-card.png" width="220" alt="QQ 交流群二维码" /></a></td><td align="center"><a href="docs/assets/qq-group-2-card.png"><img src="docs/assets/qq-group-2-card.png" width="220" alt="QQ 专题群二维码" /></a></td><td align="center"><a href="docs/assets/qq-group-3-card.png"><img src="docs/assets/qq-group-3-card.png" width="220" alt="Cool coffeeAI 交流群二维码" /></a></td></tr>
 <tr><td align="center"><code>1057540028</code></td><td align="center"><code>1077074552</code></td><td align="center"><code>618179023</code></td></tr>
 </table>

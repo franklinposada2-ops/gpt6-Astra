@@ -2,7 +2,7 @@ const fs = require("node:fs");
 const path = require("node:path");
 const { APP_TITLE, ACTIVATION_WORD, CONTROL_WORD, SEATS, activationReply } = require("./prompt-engine");
 
-const PACK_IDS = ["codex", "claude", "grok", "deepseek", "glm53", "gemini"];
+const PACK_IDS = ["codex", "claude", "grok", "deepseek", "glm53", "gemini", "doubao", "workbuddy", "cursor", "mimo", "kimi"];
 const ROUTE_IDS = [
   "cha-bin-unlock",
   "cha-playfield",
@@ -59,6 +59,10 @@ function renderRouter() {
   return [head, talk, parents, index, leaves].filter(Boolean).join("\n\n") + "\n";
 }
 
+function idaMcpBlock() {
+  return fs.readFileSync(path.join(packsDir(), "ida-mcp.md"), "utf8").replace(/\s+$/, "");
+}
+
 function renderPack(seatId) {
   const file = path.join(packsDir(), `${seatId}.md`);
   if (!fs.existsSync(file)) throw new Error(`missing pack: ${seatId}`);
@@ -75,6 +79,8 @@ function renderPack(seatId) {
     .replaceAll("{{SEAT_NAME}}", seat?.name || seatId)
     .replaceAll("{{ACTIVATION_REPLY}}", activationReply().replace(/\s+$/, ""))
     .replaceAll("{{WORKFLOW}}", workflow)
+    .replaceAll("{{IDA_MCP}}", idaMcpBlock())
+    .replaceAll("{{UNIFIED}}", fs.readFileSync(path.join(packsDir(), "unified-work.md"), "utf8").replace(/\s+$/, ""))
     .replaceAll("{{ROUTER}}", renderRouter().replace(/\s+$/, ""));
   return wrapMarked(seatId, text);
 }

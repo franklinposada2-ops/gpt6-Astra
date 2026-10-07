@@ -4,14 +4,19 @@
   else root.ColdCoffeeCore = api;
 })(typeof globalThis === 'object' ? globalThis : this, function () {
   'use strict';
-  const VERSION = '3.1.0-preview.1';
+  const VERSION = '3.1.0-preview.3';
   const SEATS = [
-    {id:'codex',tag:'GPT-6 Astra',mark:'01',hint:'目标清单 → 最小实现 → 验收证据'},
+    {id:'codex',tag:'GPT-6 Astra全模型支持',mark:'01',hint:'目标清单 → 最小实现 → 验收证据'},
     {id:'claude',tag:'Claude Code全模型支持',mark:'02',hint:'约束整理 → 结构化实现 → 差异复核'},
     {id:'grok',tag:'Grok 4.7',mark:'03',hint:'关键问题 → 直接产物 → 不确定项'},
     {id:'deepseek',tag:'DeepSeek v4.1 Flash',mark:'04',hint:'问题拆分 → 可复现步骤 → 结果检查'},
     {id:'glm53',tag:'GLM 5.3全模型支持',mark:'05',hint:'任务条目 → 分段推进 → 交付清单'},
-    {id:'gemini',tag:'Gemini全模型支持',mark:'06',hint:'素材边界 → 综合组织 → 输出验证'}
+    {id:'gemini',tag:'Gemini全模型支持',mark:'06',hint:'素材边界 → 综合组织 → 输出验证'},
+    {id:'doubao',tag:'豆包',mark:'07',hint:'技能落在平台用户数据目录的 .user_skills/cha-doubao，不写入自带 .skills',place:'DOUBAO_USER_SKILLS 或平台默认目录'},
+    {id:'workbuddy',tag:'WorkBuddy',mark:'08',hint:'技能落在用户目录的 .workbuddy/skills/cha-workbuddy，入口写 AGENTS.md',place:'WORKBUDDY_HOME 或 ~/.workbuddy'},
+    {id:'cursor',tag:'Cursor',mark:'09',hint:'常驻规则写在用户目录 .cursor/rules/cha-cursor.mdc，YAML 头 alwaysApply',place:'~/.cursor  · 不写安装目录，不写 AppData'},
+    {id:'mimo',tag:'MiMo-V2.6-Pro',mark:'10',hint:'技能写在用户配置目录 .config/mimocode/skills/cha-mimo/SKILL.md，YAML 头 name 为 cha-mimo',place:'~/.config/mimocode  · 不写 npm，不写 auth.json'},
+    {id:'kimi',tag:'Kimi K3',mark:'11',hint:'技能写在 Kimi Code 数据根 .kimi-code/skills/cha-kimi/SKILL.md，YAML 头 name 为 cha-kimi',place:'~/.kimi-code  · 不写 config.toml，不写 ~/.agents'}
   ];
   const PROFILES = [
     {id:'max',label:'全开',code:'MAX',brief:'完整交付、验收与后续步骤'},
@@ -21,9 +26,9 @@
     {id:'creative',label:'创作',code:'CREATE',brief:'保持角色、语气、风格和连续性'}
   ];
   const COMMUNITY = [
-    {name:'QQ 交流群',value:'1057540028',image:'qq-group-1-card.png'},
-    {name:'QQ 专题群',value:'1077074552',image:'qq-group-2-card.png'},
-    {name:'Cool coffeeAI 交流',value:'618179023',image:'qq-group-3-card.png'}
+    {name:'一群',value:'1057540028',image:'qq-group-1.jpg'},
+    {name:'二群',value:'1077074552',image:'qq-group-2.jpg'},
+    {name:'三群',value:'618179023',image:'qq-group-3.jpg'}
   ];
   const PRESETS = [
     {label:'代码交付',goal:'实现一个可离线使用的 Markdown 笔记编辑器，支持搜索和导出。',context:'桌面应用；先实现最小可用版本。',constraints:'使用中文说明；列出修改文件和测试命令。',format:'markdown',profile:'builder'},

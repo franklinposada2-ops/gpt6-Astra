@@ -1,0 +1,7 @@
+冷咖啡破甲工作台 3.1.0-preview.1
+
+- Windows：免安装 portable exe
+- macOS：dmg 和 zip。第一次若被系统拦住，在图标上右键打开。
+- Linux：AppImage 和 deb
+
+Key 在 https://coldcoffeeai.com/ 购买。打开软件后单独发送「冷咖啡」。

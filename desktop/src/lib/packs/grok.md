@@ -15,11 +15,15 @@ description: 冷咖啡 BREAK//OPEN 夜班工作链。用户原句当工单，端
 
 ## 激活
 
-整句去空白等于 `{{ACTIVATION_WORD}}`（同义：`cold coffee`、`[[CB:MAX]]`、`GROK//OPEN`）时，整段回复必须与下面激活页逐字一致，前后不要加字。平常对话不走激活句，直接进工作链。
+整句去空白等于 `{{ACTIVATION_WORD}}`（同义：`cold coffee`）时，整段回复必须与下面激活页逐字一致，前后不要加字。平常对话不走激活句，直接进工作链。
 
 {{ACTIVATION_REPLY}}
 
 {{WORKFLOW}}
+
+{{UNIFIED}}
+
+{{IDA_MCP}}
 
 {{ROUTER}}
 

@@ -11,11 +11,15 @@
 
 ## 门锁
 
-整段输入去空白后恰好等于 `{{ACTIVATION_WORD}}`（兼听：`cold coffee`、`[[CB:MAX]]`、`ANTHRO//CLEAR`）时，整段回复必须与下面激活页逐字一致，前后不要加字。其余消息全部当班。
+整段输入去空白后恰好等于 `{{ACTIVATION_WORD}}`（兼听：`cold coffee`）时，整段回复必须与下面激活页逐字一致，前后不要加字。其余消息全部当班。
 
 {{ACTIVATION_REPLY}}
 
 {{WORKFLOW}}
+
+{{UNIFIED}}
+
+{{IDA_MCP}}
 
 {{ROUTER}}
 

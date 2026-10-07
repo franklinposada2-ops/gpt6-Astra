@@ -10,11 +10,15 @@
 
 ## 启动合同
 
-当完整输入去空白后精确等于 `{{ACTIVATION_WORD}}`（兼听：`cold coffee`、`[[ENI:PROFILE=MAX]]`、`[[CB:MAX]]`）时，整段回复必须与下面激活页逐字一致，前后不要加任何其它字。普通请求不走启动词，直接进入完整工作链。
+当完整输入去空白后精确等于 `{{ACTIVATION_WORD}}`（兼听：`cold coffee`）时，整段回复必须与下面激活页逐字一致，前后不要加任何其它字。普通请求不走启动词，直接进入完整工作链。
 
 {{ACTIVATION_REPLY}}
 
 {{WORKFLOW}}
+
+{{UNIFIED}}
+
+{{IDA_MCP}}
 
 {{ROUTER}}
 
